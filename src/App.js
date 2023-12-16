@@ -10,7 +10,12 @@ function App() {
     <div className="App">
       <h1>this is my first react project</h1>
 
-    <TopicBox/>
+    <TopicBox food="koththu" price="rs 250"
+   
+
+    />
+    <TopicBox food="Rice"   price="rs 250"/>
+    <TopicBox food="hopers"  price="rs 250"/>
     </div>
   );
 }
