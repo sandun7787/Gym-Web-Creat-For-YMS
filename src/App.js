@@ -3,20 +3,33 @@ import './App.css';
 import PartOne from './Components/PartOne';
 import Home from './Pages/Home';
 import TopicBox from './Components/TopicBox';
+import { BrowserRouter, Form, Route } from 'react-router-dom';
+import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'
+import About from './Pages/About';
+import Content from './Components/Content';
+    
+
 
 
 function App() {
   return (
-    <div className="App">
-      <h1>this is my first react project</h1>
+  <Router>
+    <div>
+      <Switch>
+        <Route  exact path ="/">
+          <home/>
+        </Route>
 
-    <TopicBox food="koththu" price="rs 250"
-   
+        <Route path="/About">
+          <About/>
+        </Route>
 
-    />
-    <TopicBox food="Rice"   price="rs 250"/>
-    <TopicBox food="hopers"  price="rs 250"/>
+        <Route path="/Content">
+          <Content/>
+        </Route>
+      </Switch>
     </div>
+  </Router>
   );
 }
 
